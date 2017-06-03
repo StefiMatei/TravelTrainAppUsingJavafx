@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TicketController">
+   <children>
+      <TabPane layoutX="-3.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Trains">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="trainTableView" prefHeight="200.0" prefWidth="552.0">
+                          <columns>
+                            <TableColumn fx:id="trainIdTc" prefWidth="75.0" text="TableId" />
+                            <TableColumn fx:id="numberTc" prefWidth="75.0" text="Number" />
+                              <TableColumn fx:id="departureTc" prefWidth="78.0" text="Departure" />
+                              <TableColumn fx:id="arrivalTc" prefWidth="77.0" text="Arrival" />
+                              <TableColumn fx:id="fromTc" prefWidth="75.0" text="From" />
+                              <TableColumn fx:id="toTc" prefWidth="75.0" text="To" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="addTrain" layoutX="22.0" layoutY="210.0" mnemonicParsing="false" onAction="#setAddTrainButton" text="Add Train" />
+                        <Button fx:id="updateTrain" layoutX="21.0" layoutY="249.0" mnemonicParsing="false" onAction="#setUpdateTrainButton" text="Update Train" />
+                        <Button fx:id="viewTrains" layoutX="20.0" layoutY="287.0" mnemonicParsing="false" onAction="#setViewTrainsButton" text="View Train" />
+                        <Button fx:id="findTrain" layoutX="23.0" layoutY="324.0" mnemonicParsing="false" onAction="#setFindTrainButton" text="Search Train" />
+                        <TextField fx:id="trainIdTf" layoutX="191.0" layoutY="210.0" promptText="TableId" />
+                        <TextField fx:id="numberTf" layoutX="191.0" layoutY="249.0" promptText="Number" />
+                        <TextField fx:id="departureTf" layoutX="191.0" layoutY="287.0" promptText="Departure" />
+                        <TextField fx:id="arrivalTf" layoutX="191.0" layoutY="324.0" promptText="Arrival" />
+                        <TextField fx:id="fromTf" layoutX="352.0" layoutY="210.0" promptText="From" />
+                        <TextField fx:id="toTf" layoutX="352.0" layoutY="249.0" promptText="To" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Tickets">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="ticketTableView" layoutX="6.0" layoutY="8.0" prefHeight="170.0" prefWidth="394.0">
+                          <columns>
+                            <TableColumn fx:id="ticketIdTc" prefWidth="75.0" text="TicketId" />
+                            <TableColumn fx:id="trainTIdTc" prefWidth="75.0" text="TrainId" />
+                              <TableColumn fx:id="priceTc" prefWidth="75.0" text="Price" />
+                              <TableColumn fx:id="quantityTc" prefWidth="75.0" text="Quantity" />
+                              <TableColumn fx:id="placeNumberTc" prefWidth="75.0" text="PlaceNumber" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="ticketIdTf" layoutX="210.0" layoutY="186.0" promptText="TicketId" />
+                        <TextField fx:id="trainTIdTf" layoutX="210.0" layoutY="219.0" promptText="TrainId" />
+                        <TextField fx:id="priceTf" layoutX="210.0" layoutY="255.0" promptText="Price" />
+                        <TextField fx:id="quantityTf" layoutX="210.0" layoutY="288.0" promptText="Quantity" />
+                        <TextField fx:id="placeNumberTf" layoutX="210.0" layoutY="322.0" promptText="Place Number" />
+                        <Button fx:id="addTicket" layoutX="33.0" layoutY="199.0" mnemonicParsing="false" onAction="#setAddTicketButton" text="Add Ticket" />
+                        <Button fx:id="sellTicket" layoutX="33.0" layoutY="244.0" mnemonicParsing="false" onAction="#setSellTicket" text="Sell Ticket" />
+                        <Button fx:id="viewTickets" layoutX="35.0" layoutY="288.0" mnemonicParsing="false" onAction="#setViewTicketsButton" text="View Tickets" />
+                        <TextField fx:id="raportTickedId" layoutX="422.0" layoutY="14.0" promptText="TicketIdRaport" />
+                        <TextField fx:id="raportTrainId" layoutX="422.0" layoutY="54.0" promptText="TrainIdRaport" />
+                        <TextField fx:id="raportTrainNumber" layoutX="422.0" layoutY="93.0" promptText="TrainNumberRaport" />
+                        <TextField fx:id="raportDestination" layoutX="422.0" layoutY="138.0" promptText="DestinationRaport" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoginView">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+            <tabs>
+                <Tab text="Admin Login">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="userTxt" layoutX="14.0" layoutY="24.0" promptText="username" />
+                                <Button fx:id="loginBtn" layoutX="63.0" layoutY="122.0" mnemonicParsing="false" onAction="#setLoginBtn" text="Login" />
+                                <PasswordField fx:id="pasText" layoutX="14.0" layoutY="73.0" promptText="password" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="User Login">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="userNameTxt" layoutX="26.0" layoutY="29.0" promptText="username" />
+                                <Button fx:id="loginUserTxt" layoutX="65.0" layoutY="132.0" mnemonicParsing="false" onAction="#setLoginUserBtn" text="Login" />
+                                <PasswordField fx:id="pasUserTxt" layoutX="26.0" layoutY="86.0" promptText="password" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</GridPane>

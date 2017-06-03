@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.UserView">
+   <children>
+      <TabPane layoutX="-3.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Trains">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="200.0" prefWidth="552.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="TableId" />
+                            <TableColumn prefWidth="75.0" text="Number" />
+                              <TableColumn prefWidth="78.0" text="Departure" />
+                              <TableColumn prefWidth="77.0" text="Arrival" />
+                              <TableColumn prefWidth="75.0" text="From" />
+                              <TableColumn prefWidth="75.0" text="To" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="b4" layoutX="22.0" layoutY="210.0" mnemonicParsing="false" onAction="#addTrainViewb4" text="Add Train" />
+                        <Button fx:id="b5" layoutX="21.0" layoutY="249.0" mnemonicParsing="false" onAction="#updateTrainViewb5" text="Update Train" />
+                        <Button fx:id="b6" layoutX="20.0" layoutY="287.0" mnemonicParsing="false" onAction="#viewTrainb6" text="View Train" />
+                        <Button fx:id="b7" layoutX="23.0" layoutY="324.0" mnemonicParsing="false" onAction="#searchTrainViewb7" text="Search Train" />
+                        <TextField layoutX="191.0" layoutY="210.0" promptText="TableId" />
+                        <TextField layoutX="191.0" layoutY="249.0" promptText="Number" />
+                        <TextField layoutX="191.0" layoutY="287.0" promptText="Departure" />
+                        <TextField layoutX="191.0" layoutY="324.0" promptText="Arrival" />
+                        <TextField layoutX="352.0" layoutY="210.0" promptText="From" />
+                        <TextField layoutX="352.0" layoutY="249.0" promptText="To" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Tickets">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="6.0" layoutY="8.0" prefHeight="170.0" prefWidth="394.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="TicketId" />
+                            <TableColumn prefWidth="75.0" text="TrainId" />
+                              <TableColumn prefWidth="75.0" text="Price" />
+                              <TableColumn prefWidth="75.0" text="Quantity" />
+                              <TableColumn prefWidth="75.0" text="PlaceNumber" />
+                          </columns>
+                        </TableView>
+                        <TextField layoutX="210.0" layoutY="186.0" promptText="TicketId" />
+                        <TextField layoutX="210.0" layoutY="219.0" promptText="TrainId" />
+                        <TextField layoutX="210.0" layoutY="255.0" promptText="Price" />
+                        <TextField layoutX="210.0" layoutY="288.0" promptText="Quantity" />
+                        <TextField layoutX="210.0" layoutY="322.0" promptText="Place Number" />
+                        <Button fx:id="b1" layoutX="33.0" layoutY="199.0" mnemonicParsing="false" onAction="#addTicketb1" text="Add Ticket" />
+                        <Button fx:id="b3" layoutX="33.0" layoutY="244.0" mnemonicParsing="false" onAction="#sellTicketb3" text="Sell Ticket" />
+                        <Button fx:id="b2" layoutX="35.0" layoutY="288.0" mnemonicParsing="false" onAction="#viewTicketb2" text="View Tickets" />
+                        <TextField layoutX="422.0" layoutY="14.0" promptText="TicketIdRaport" />
+                        <TextField layoutX="422.0" layoutY="54.0" promptText="TrainIdRaport" />
+                        <TextField layoutX="422.0" layoutY="93.0" promptText="TrainNumberRaport" />
+                        <TextField layoutX="422.0" layoutY="138.0" promptText="DestinationRaport" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
